@@ -18,9 +18,9 @@ namespace StudentAttendanceSystem.Controllers
 	{
 		private readonly IStudentService _studentService;
 
-		public StudentsController(IStudentService employeeService)
+		public StudentsController(IStudentService studentService)
 		{
-			_studentService = employeeService;
+			_studentService =studentService;
 		}
 
 

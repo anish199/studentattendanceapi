@@ -11,7 +11,7 @@ using StudentAttendanceSystem.Services.LeaveServices;
 
 namespace StudentAttendanceSystem.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
     public class LeavesController : ControllerBase
     {
