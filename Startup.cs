@@ -44,7 +44,7 @@ namespace StudentAttendanceSystem
             services.AddScoped<IAdminService, AdminService>();
             services.AddScoped<IAccountService, AccountService>();
             services.AddDbContext<StudentAttendanceSystemContext>(options =>
-                   options.UseSqlServer(Configuration.GetConnectionString("StudentAttendanceSystemContext")));
+                   options.UseSqlServer(Configuration.GetConnectionString("attendancecontext")));
             services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin()); });
 
         }
