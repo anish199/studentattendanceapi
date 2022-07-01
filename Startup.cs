@@ -45,7 +45,8 @@ namespace StudentAttendanceSystem
             services.AddScoped<IAccountService, AccountService>();
             services.AddDbContext<StudentAttendanceSystemContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("attendancecontext")));
-            services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin()); });
+            //services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin()); });
+            services.AddCors(options => { options.AddDefaultPolicy(builder => { builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod(); }); });
 
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
